@@ -23,7 +23,7 @@ http:
 runtime:
   variables:
     - name: baseUrl
-      value: http://localhost:8080
+      value: https://account-service-d1y8.onrender.com
     - name: api_key
       value: MGX_204406
 
