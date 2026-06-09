@@ -1,0 +1,25 @@
+info:
+  name: Get transaction by ID
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{baseurl}}/api/v1/accounts/e545171d-9d10-4861-a310-f95b42a5269f/transactions"
+  headers:
+    - name: x-api-key
+      value: "{{api_key}}"
+  auth: inherit
+
+runtime:
+  variables:
+    - name: baseurl
+      value: http://localhost:8080
+    - name: api_key
+      value: MGX_204406
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

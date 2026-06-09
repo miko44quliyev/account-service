@@ -1,0 +1,34 @@
+info:
+  name: Deposit
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/v1/accounts/91ddd375-0d50-4247-a25b-af1d282cc5b3/deposit"
+  headers:
+    - name: x-api-key
+      value: "{{api_key}}"
+  body:
+    type: json
+    data: |-
+      {
+        "amount": 1500.50,
+        "description": "Salary deposit"
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: baseUrl
+      value: http://localhost:8080
+    - name: api
+      value: MGX_204406
+    - name: api_key
+      value: MGX_204406
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,31 @@
+info:
+  name: Update user
+  type: http
+  seq: 4
+
+http:
+  method: PATCH
+  url: "{{baseUrl}}/api/v1/users/01eb60f9-99e2-410f-827e-86c9f725d698"
+  headers:
+    - name: x-api-key
+      value: "{{api_key}}"
+  body:
+    type: json
+    data: |-
+      {
+        "firstName": "John"
+      }
+  auth: inherit
+
+runtime:
+  variables:
+    - name: baseUrl
+      value: http://localhost:8080
+    - name: api_key
+      value: MGX_204406
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

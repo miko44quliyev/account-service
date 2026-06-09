@@ -1,0 +1,27 @@
+info:
+  name: Get accounts for user
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: "{{baseUrl}}/api/v1/accounts/users/72da888f-77ab-4edb-99e8-d1645a116d65"
+  headers:
+    - name: x-api-key
+      value: "{{api_key}}"
+  auth: inherit
+
+runtime:
+  variables:
+    - name: baseUrl
+      value: http://localhost:8080
+    - name: api
+      value: MGX_204406
+    - name: api_key
+      value: MGX_204406
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

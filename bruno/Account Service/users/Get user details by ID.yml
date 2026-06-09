@@ -1,0 +1,27 @@
+info:
+  name: Get user details by ID
+  type: http
+  seq: 2
+
+http:
+  method: GET
+  url: "{{baseUrl}}/api/v1/users/8ddc074a-e0ff-4d2e-882d-198e4b1c9b3e"
+  headers:
+    - name: x-api-key
+      value: "{{api_key}}"
+  auth: inherit
+
+runtime:
+  variables:
+    - name: baseUrl
+      value: http://localhost:8080
+    - name: api
+      value: MGX_204406
+    - name: api_key
+      value: MGX_204406
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
